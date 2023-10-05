@@ -12,6 +12,9 @@
 var focus = true;
 var gameended = false;
 var reset;
+//remove annoying buttons(cleaner look)
+const sub = document.getElementById("subscribeLinkNav");
+sub.remove();
 
 function scanner() {
     var gameStatusLabel = document.getElementsByClassName("gameStatusLabel")[0];
@@ -27,7 +30,6 @@ function scanner() {
         var mistakes = document.getElementsByClassName("content")[0].innerText.split("\n");
         reset = document.getElementsByClassName("content")[0].innerHTML;
 
-        // Rest of the code for handling the replay and highlighting mistakes remains unchanged...
 
         var textarea = document.createElement("input");
         textarea.style.width = "300px";
